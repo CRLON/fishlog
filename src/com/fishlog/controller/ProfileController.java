@@ -21,7 +21,7 @@ public class ProfileController {
 	@Autowired
 	private UserRepository userRepository;
 
-	@RequestMapping(value = "/addFish", method = RequestMethod.GET)
+	@RequestMapping(value = "/profile", method = RequestMethod.GET)
 	public String redirect(HttpServletRequest request, HttpServletResponse response) {
 		//TODO: Add redirect
 		return "profile";
@@ -41,7 +41,7 @@ public class ProfileController {
 		} else {
 			model.addAttribute("errorMessage", "Error. One or more fields are empty");
 		}
-		return "profile";
+		return "redirect:/profile";
 	}
 
 	@RequestMapping(value = "/deleteFish", method = RequestMethod.POST)
@@ -59,9 +59,7 @@ public class ProfileController {
 			model.addAttribute("errorMessage", "Please select one or more entrys to delete.");
 		}
 		session.setAttribute("currentUserFishList", currentUser.getFishList());
-		
-		//TODO: Redirect
-		return "profile";
+		return "redirect:/profile";
 	}
 
 }
