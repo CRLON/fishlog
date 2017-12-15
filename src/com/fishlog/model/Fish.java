@@ -2,9 +2,6 @@ package com.fishlog.model;
 
 import java.io.Serializable;
 
-import org.springframework.data.mongodb.core.mapping.Document;
-
-@Document(collection = "fish")
 public class Fish implements Serializable {
 
 	private static final long serialVersionUID = -6094173246874099169L;
