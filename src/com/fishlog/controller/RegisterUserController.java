@@ -13,6 +13,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.fishlog.database.UserRepository;
 import com.fishlog.model.User;
 
+/**
+ * 
+ * Class handling user registration
+ * @author CRL
+ *
+ */
 @Controller
 public class RegisterUserController {
 
@@ -24,6 +30,15 @@ public class RegisterUserController {
 		return "register";
 	}
 
+	/**
+	 * 
+	 * Method used to register and add a new user to database
+	 * 
+	 * @param model
+	 * @param username 
+	 * @param password
+	 * @return
+	 */
 	@RequestMapping(value = "/registerUser", method = RequestMethod.POST)
 	public String registerUser(Model model, @RequestParam String username, @RequestParam String password) {
 		if (username.length() > 0 && password.length() > 0 && !userRepository.exists(username)) {

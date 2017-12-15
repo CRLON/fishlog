@@ -15,6 +15,13 @@ import com.fishlog.database.UserRepository;
 import com.fishlog.model.Fish;
 import com.fishlog.model.User;
 
+/**
+ * 
+ * Class handling user profile
+ * 
+ * @author CRL
+ *
+ */
 @Controller
 public class ProfileController {
 
@@ -27,6 +34,18 @@ public class ProfileController {
 		return "profile";
 	}
 
+	/**
+	 * 
+	 * Method used to add a fish to logged in user
+	 * 
+	 * @param model Used to display error and success messages
+	 * @param species of fish to add
+	 * @param weight of fish to add
+	 * @param length of fish to add
+	 * @param request
+	 * @param response
+	 * @return URL redirect
+	 */
 	@RequestMapping(value = "/addFish", method = RequestMethod.POST)
 	public String addFish(Model model, @RequestParam String species, 
 			@RequestParam int weight, @RequestParam int length, HttpServletRequest request, 
@@ -43,6 +62,16 @@ public class ProfileController {
 		}
 		return "redirect:/profile";
 	}
+
+	/**
+	 * 
+	 * Method used to delete a fish from users database
+	 * 
+	 * @param model used to display error and success messages
+	 * @param request
+	 * @param response
+	 * @return URL redirect
+	 */
 
 	@RequestMapping(value = "/deleteFish", method = RequestMethod.POST)
 	public String removeFish(Model model, HttpServletRequest request, HttpServletResponse response) {

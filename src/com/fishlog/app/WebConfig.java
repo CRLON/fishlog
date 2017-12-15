@@ -8,6 +8,8 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
+import com.fishlog.model.User;
+
 @Configuration
 @EnableWebMvc
 @EnableMongoRepositories("com.fishlog.database")

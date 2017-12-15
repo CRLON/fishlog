@@ -6,6 +6,12 @@ import java.util.List;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+/**
+ * User entity
+ * 
+ * @author CRL
+ *
+ */
 @Document(collection = "users")
 public class User implements Serializable {
 

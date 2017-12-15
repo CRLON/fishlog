@@ -2,6 +2,12 @@ package com.fishlog.model;
 
 import java.io.Serializable;
 
+/**
+ * Fish POJO
+ * 
+ * @author CRL
+ *
+ */
 public class Fish implements Serializable {
 
 	private static final long serialVersionUID = -6094173246874099169L;

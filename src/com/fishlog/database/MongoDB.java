@@ -6,7 +6,12 @@ import org.springframework.data.mongodb.config.AbstractMongoConfiguration;
 
 import com.mongodb.MongoClient;
 
-
+/**
+ * This class handles MongoDB connection
+ * 
+ * @author CRL
+ *
+ */
 @Configuration
 public class MongoDB extends AbstractMongoConfiguration {
 
@@ -15,6 +20,11 @@ public class MongoDB extends AbstractMongoConfiguration {
 		return "Fishlog";
 	}
 
+	/**
+	 * 
+	 * Creates MongoDB client
+	 * 
+	 */
 	@Override
 	@Bean
 	public MongoClient mongo() throws Exception {

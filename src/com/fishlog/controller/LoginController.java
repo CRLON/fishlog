@@ -15,6 +15,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.fishlog.database.UserRepository;
 import com.fishlog.model.User;
 
+/**
+ * Class handling user login
+ * 
+ * @author CRL
+ *
+ */
 @Controller
 public class LoginController {
 
@@ -26,6 +32,16 @@ public class LoginController {
 		return "index";
 	}
 
+	/**
+	 * Method used to handle user login
+	 * 
+	 * @param model Used to display error and success messages
+	 * @param username Fetched from index.jsp
+	 * @param password Fetched from index.jsp
+	 * @param request
+	 * @param response
+	 * @return
+	 */
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public String showProfile(Model model, @RequestParam String username, @RequestParam String password, 
 			HttpServletRequest request, HttpServletResponse response) {
