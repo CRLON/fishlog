@@ -3,9 +3,9 @@ package com.fishlog.model;
 import java.io.Serializable;
 
 /**
- * Fish POJO
+ * Fish entity
  * 
- * @author CRL
+ * @author Cristoffer Lönn
  *
  */
 public class Fish implements Serializable {
@@ -47,6 +47,5 @@ public class Fish implements Serializable {
 	public void setLength(int length) {
 		this.length = length;
 	}
-
 
 }

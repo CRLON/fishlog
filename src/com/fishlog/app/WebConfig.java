@@ -5,10 +5,9 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
-
-import com.fishlog.model.User;
 
 @Configuration
 @EnableWebMvc
@@ -23,5 +22,13 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 		resolver.setSuffix(".jsp");
 		return resolver;
 	}
+
+	/**
+	 * Adds resource folders 
+	 */
+	@Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+    registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
+    }
 
 }

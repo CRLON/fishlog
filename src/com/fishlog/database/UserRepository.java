@@ -8,7 +8,7 @@ import com.fishlog.model.User;
 /**
  * 
  * Interface used for CRUD-Operations
- * @author CRL
+ * @author Cristoffer Lönn
  *
  */
 @Repository

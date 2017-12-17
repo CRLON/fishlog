@@ -9,7 +9,7 @@ import com.mongodb.MongoClient;
 /**
  * This class handles MongoDB connection
  * 
- * @author CRL
+ * @author Cristoffer Lönn
  *
  */
 @Configuration

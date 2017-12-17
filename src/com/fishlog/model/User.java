@@ -3,30 +3,34 @@ package com.fishlog.model;
 import java.io.Serializable;
 import java.util.List;
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.stereotype.Component;
 
 /**
  * User entity
  * 
- * @author CRL
+ * @author Cristoffer Lönn
  *
  */
+@Component
+@Scope("session")
 @Document(collection = "users")
 public class User implements Serializable {
 
 	private static final long serialVersionUID = -175013064895498871L;
 	@Id
 	private String username;
-	private String hash;
+	private String password;
 	private List<Fish> fishList;
 
 	public User() {
 	}
 
-	public User(String username, String hash, List<Fish> fishList) {
+	public User(String username, String password, List<Fish> fishList) {
 		this.username = username;
-		this.hash = hash;
+		this.password = password;
 		this.fishList = fishList;
 	}
 
@@ -38,12 +42,12 @@ public class User implements Serializable {
 		this.username = username;
 	}
 
-	public String getHash() {
-		return hash;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setHash(String hash) {
-		this.hash = hash;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	public List<Fish> getFishList() {
