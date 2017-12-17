@@ -23,6 +23,8 @@ https://github.com/CRLON/fishlog.git
     
 * Import project in IDE of choice
 
+* Start MongoDB
+
 * Run project on Tomcat EE server
 
 * Open a webbrowser and navigate to http://localhost:8080/Fishlog/
@@ -57,4 +59,4 @@ jBCrypt is subject to the following license:
 
 ## Authors
 
-* **Cristoffer Lönn** - *School project* - [Git](https://github.com/CRLON)
+* **Cristoffer Lönn** - [Git](https://github.com/CRLON)
