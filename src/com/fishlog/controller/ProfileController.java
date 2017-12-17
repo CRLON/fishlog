@@ -33,13 +33,16 @@ public class ProfileController {
 	private UserRepository userRepository;
 
 	/**
-	 * Method mapping for profile
 	 * 
 	 * @param modelAndView Used to set URI and Messages
+	 * @param session Current session used to check if any user is logged in
 	 * @return view URI and messages
 	 */
 	@RequestMapping(value = "/profile", method = RequestMethod.GET)
-	public ModelAndView redirect(ModelAndView modelAndView) {
+	public ModelAndView redirect(ModelAndView modelAndView, HttpSession session) {
+		if(session.getAttribute("currentUser") == null) {
+			modelAndView.setViewName("index");
+		}
 		return modelAndView;
 	}
 	
